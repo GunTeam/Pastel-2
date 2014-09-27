@@ -18,7 +18,6 @@
 		B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		B71F5919188484E7003F4D28 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590F188484E7003F4D28 /* Settings.png */; };
 		B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5910188484E7003F4D28 /* Settings@2x.png */; };
-		B737893B180761570076A88C /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = B737893A180761570076A88C /* Published-iOS */; };
 		B737893F1807617C0076A88C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		B7378975180762440076A88C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896B180762440076A88C /* Default-568h@2x.png */; };
 		B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896C180762440076A88C /* Default-Landscape~ipad.png */; };
@@ -39,6 +38,7 @@
 		BA44ECFD19D6266100BF35CB /* Leader.m in Sources */ = {isa = PBXBuildFile; fileRef = BA44ECFC19D6266100BF35CB /* Leader.m */; };
 		BA44ED0019D6266800BF35CB /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = BA44ECFF19D6266800BF35CB /* Follower.m */; };
 		BA44ED0319D6267500BF35CB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA44ED0219D6267500BF35CB /* GameScene.m */; };
+		BAD6087819D62F83004D4BF9 /* grossini_dance_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD6087719D62F83004D4BF9 /* grossini_dance_atlas.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +99,7 @@
 		BA44ECFF19D6266800BF35CB /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
 		BA44ED0119D6267500BF35CB /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA44ED0219D6267500BF35CB /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BAD6087719D62F83004D4BF9 /* grossini_dance_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grossini_dance_atlas.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +232,7 @@
 		BA44ECF819D6264900BF35CB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BAD6087719D62F83004D4BF9 /* grossini_dance_atlas.png */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 				BA44ED0119D6267500BF35CB /* GameScene.h */,
@@ -335,7 +337,7 @@
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
-				B737893B180761570076A88C /* Published-iOS in Resources */,
+				BAD6087819D62F83004D4BF9 /* grossini_dance_atlas.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,

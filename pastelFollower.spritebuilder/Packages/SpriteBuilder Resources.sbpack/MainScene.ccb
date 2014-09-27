@@ -40,6 +40,9 @@
 		<key>baseClass</key>
 		<string>CCNode</string>
 		<key>children</key>
+<<<<<<< HEAD
+		<array/>
+=======
 		<array>
 			<dict>
 				<key>UUID</key>
@@ -690,6 +693,7 @@ Remixed &amp; Reloaded</string>
 				<true/>
 			</dict>
 		</array>
+>>>>>>> FETCH_HEAD
 		<key>customClass</key>
 		<string>MainScene</string>
 		<key>displayName</key>
