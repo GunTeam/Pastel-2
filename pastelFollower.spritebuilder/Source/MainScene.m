@@ -10,4 +10,9 @@
 
 @implementation MainScene
 
+-(void) Play{
+    CCLOG(@"PLAY");
+    [[CCDirector sharedDirector]replaceScene:[CCBReader loadAsScene:@"GameScene"] withTransition:[CCTransition transitionRevealWithDirection:CCTransitionDirectionUp duration:.2]];
+}
+
 @end
