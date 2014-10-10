@@ -39,6 +39,7 @@
 		BA44ED0019D6266800BF35CB /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = BA44ECFF19D6266800BF35CB /* Follower.m */; };
 		BA44ED0319D6267500BF35CB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA44ED0219D6267500BF35CB /* GameScene.m */; };
 		BAD6087819D62F83004D4BF9 /* grossini_dance_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD6087719D62F83004D4BF9 /* grossini_dance_atlas.png */; };
+		BAD6087B19D63BC8004D4BF9 /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = B737893A180761570076A88C /* Published-iOS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD6087B19D63BC8004D4BF9 /* Published-iOS in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,

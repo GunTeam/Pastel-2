@@ -25,7 +25,9 @@
     }
     CCSprite *sprite = [CCSprite spriteWithSpriteFrame:frames.firstObject];
     [self addChild:sprite];
-
+    CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+    CCAction *animateAction = [CCActionAnimate actionWithAnimation:animation];
+    [sprite runAction:animateAction];
 }
 
 @end
