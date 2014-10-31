@@ -10,15 +10,20 @@
 #import "cocos2d.h"
 
 @interface Follower : CCSprite {
-    NSMutableDictionary *colorsToShapes;
-    NSMutableDictionary *shapesToColors;
-    NSString *currentColor;
-    NSString *currentShape;
+    int NUM_COLORS;
+    NSArray *POSSIBLE_COLORS[4];
+    NSArray *POSSIBLE_SHAPES[4];
 }
 
-+(NSString *) getCurrentColor;
-+(NSString *) getCurrentShape;
-+(NSMutableString *) changeShape;
+@property NSMutableDictionary *colorsToShapes;
+@property NSMutableDictionary *shapesToColors;
+@property NSString *currentColor;
+@property NSString *currentShape;
+@property int stateIndex;
+
+-(NSString *) getCurrentColor;
+-(NSString *) getCurrentShape;
+-(void) changeShape;
 
 
 @end
