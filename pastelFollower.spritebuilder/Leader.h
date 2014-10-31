@@ -10,7 +10,19 @@
 #import "cocos2d.h"
 
 @interface Leader : CCSprite {
-    
+    float changeProbability;
+    NSString *currentColor;
+    NSString *currentShape;
+    NSArray *colors;
+    NSArray *shapes;
 }
+
+@property NSString *CColor;
+
+-(void) update:(CCTime)delta;
+-(NSString *) getCurrentColor;
+-(NSString *) getCurrentShape;
+-(void) changeToRandomColor;
+-(void) changeToRandomShape;
 
 @end

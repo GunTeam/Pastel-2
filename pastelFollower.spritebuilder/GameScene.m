@@ -25,9 +25,65 @@
     }
     CCSprite *sprite = [CCSprite spriteWithSpriteFrame:frames.firstObject];
     [self addChild:sprite];
-    CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
-    CCAction *animateAction = [CCActionAnimate actionWithAnimation:animation];
-    [sprite runAction:animateAction];
 }
+/*
+ Update {
+    boolean allKorrect = [self checkAllStates]
+    if allKorrect:
+        [self winLevel]
+ 
+    if(self.timeRunning)
+        time -= 1/60
+    if(time < 0)
+         self.timeRunning = false
+        [self timeOver]
+    [self updateTimeLabel]
+ }
+
+ checkAllStates{
+ 
+    for follower in followerList
+        if( self.matchMode == "color")
+            if(follower.currentColor != leader.currentColor){
+                return False
+            }
+        else{
+            if(follower.currentShape != leader.currentShape){
+                return False
+            }
+        }
+    return True
+ }
+ 
+ updateTimeLabel{
+ 
+ }
+ 
+ timeOver{
+    [self takeAwayHeart]
+    flash screen
+    flash timer red
+ 
+ }
+ 
+ winLevel{
+    
+    multiplier = some number
+    score += time*multiplier
+    score += levelBonus
+    [self displayScore]
+ }
+ 
+ newLevel{
+    set the match mode to either color or shape
+        set the leader color/shape
+        reset timer
+        timeRunning = true
+ }
+ 
+ 
+ }
+ 
+ */
 
 @end
