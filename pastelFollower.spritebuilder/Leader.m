@@ -12,6 +12,8 @@
 @implementation Leader
 
 -(void) didLoadFromCCB {
+    *POSSIBLE_COLORS =  @[@"Blue",@"Green",@"Yellow",@"Red"];
+    *POSSIBLE_SHAPES =  @[@"Star",@"Circle",@"Square",@"Triangle"];
     changeProbability = 5;
     currentColor = @"";
     self.CColor = @"Blue";

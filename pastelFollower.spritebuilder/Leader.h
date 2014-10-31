@@ -13,8 +13,8 @@
     float changeProbability;
     NSString *currentColor;
     NSString *currentShape;
-    NSArray *colors;
-    NSArray *shapes;
+    NSArray *POSSIBLE_COLORS[4];
+    NSArray *POSSIBLE_SHAPES[4];
 }
 
 @property NSString *CColor;
