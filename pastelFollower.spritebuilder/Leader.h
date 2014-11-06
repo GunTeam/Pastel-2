@@ -18,8 +18,9 @@
 }
 
 @property NSString *CColor;
+@property NSString *CShape;
 
--(void) update:(CCTime)delta;
+//-(void) update:(CCTime)delta;
 -(NSString *) getCurrentColor;
 -(NSString *) getCurrentShape;
 -(void) changeToRandomColor;

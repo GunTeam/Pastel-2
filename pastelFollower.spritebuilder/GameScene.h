@@ -13,4 +13,6 @@
     
 }
 
+-(void) update:(CCTime)delta;
+
 @end
