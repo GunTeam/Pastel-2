@@ -13,6 +13,11 @@
     
 }
 
--(void) update:(CCTime)delta;
+@property int score;
+@property int multiplier;
+@property int levelBonus;
 
+-(void) update:(CCTime)delta;
+-(void) winLevel:(int)timeLeft;
+-(void) newLevel;
 @end

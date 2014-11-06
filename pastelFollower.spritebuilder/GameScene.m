@@ -23,9 +23,31 @@
             if (frameCount == 14) break;
         }
     }
+    
+    self.score = 0;
+    self.multiplier = 1;
+    self.levelBonus = 100;
+    
     CCSprite *sprite = [CCSprite spriteWithSpriteFrame:frames.firstObject];
     [self addChild:sprite];
 }
+
+-(void) winLevel:(int) timeLeft{
+    self.multiplier += 1;
+    self.score += timeLeft*self.multiplier;
+    self.score += self.levelBonus;
+    self.levelBonus += 10;
+//    [self newLevel];
+//    [self displayScore];
+}
+
+-(void) newLevel{
+    set the match mode to either color or shape
+    set the leader color/shape
+    reset timer
+    timeRunning = true
+}
+
 /*
  Update {
     boolean allKorrect = [self checkAllStates]
@@ -65,21 +87,9 @@
     flash timer red
  
  }
+
  
- winLevel{
-    
-    multiplier = some number
-    score += time*multiplier
-    score += levelBonus
-    [self displayScore]
- }
- 
- newLevel{
-    set the match mode to either color or shape
-        set the leader color/shape
-        reset timer
-        timeRunning = true
- }
+
  
  
  }

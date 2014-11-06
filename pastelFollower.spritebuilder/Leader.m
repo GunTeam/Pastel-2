@@ -15,24 +15,28 @@
     *POSSIBLE_COLORS =  @[@"Blue",@"Green",@"Yellow",@"Red"];
     *POSSIBLE_SHAPES =  @[@"Star",@"Circle",@"Square",@"Triangle"];
     changeProbability = 5;
-    currentColor = @"";
-    self.CColor = @"Blue";
+    [self changeToRandomColor];
+    [self changeToRandomShape];
 }
 
 
 -(NSString *) getCurrentColor{
-    return self.CColor;
+    return self.currentColor;
 }
 
 -(NSString *) getCurrentShape{
-    return self.CShape;
+    return self.currentShape;
 }
 -(void) changeToRandomColor{
     float rand = arc4random()%4;
     
+    self.currentColor = [*POSSIBLE_COLORS objectAtIndex:rand];
+    
 }
 -(void) changeToRandomShape{
     float rand = arc4random()%4;
+    
+    self.currentShape = [*POSSIBLE_SHAPES objectAtIndex:rand];
 }
 
 

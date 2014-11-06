@@ -11,16 +11,13 @@
 
 @interface Leader : CCSprite {
     float changeProbability;
-    NSString *currentColor;
-    NSString *currentShape;
     NSArray *POSSIBLE_COLORS[4];
     NSArray *POSSIBLE_SHAPES[4];
 }
 
-@property NSString *CColor;
-@property NSString *CShape;
+@property NSString *currentColor;
+@property NSString *currentShape;
 
-//-(void) update:(CCTime)delta;
 -(NSString *) getCurrentColor;
 -(NSString *) getCurrentShape;
 -(void) changeToRandomColor;
