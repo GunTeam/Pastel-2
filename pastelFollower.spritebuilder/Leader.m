@@ -27,16 +27,31 @@
 -(NSString *) getCurrentShape{
     return self.currentShape;
 }
--(void) changeToRandomColor{
+
+-(NSString *) change:(NSString *)mode{
+    if([mode isEqualToString:@"color"]){
+        return [self changeToRandomColor];
+    }
+    else{
+        return [self changeToRandomShape];
+    }
+}
+
+-(NSString *) changeToRandomColor{
     float rand = arc4random()%4;
     
     self.currentColor = [*POSSIBLE_COLORS objectAtIndex:rand];
     
+    return self.currentColor;
+    
 }
--(void) changeToRandomShape{
+-(NSString *) changeToRandomShape{
     float rand = arc4random()%4;
     
     self.currentShape = [*POSSIBLE_SHAPES objectAtIndex:rand];
+    
+    return self.currentShape;
+
 }
 
 

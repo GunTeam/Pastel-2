@@ -21,6 +21,7 @@
 @property NSString *currentShape;
 @property int stateIndex;
 
+-(id)initWithOffset:(int)offset;
 -(NSString *) getCurrentColor;
 -(NSString *) getCurrentShape;
 -(void) changeShape;

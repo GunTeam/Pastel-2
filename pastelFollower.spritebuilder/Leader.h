@@ -20,7 +20,8 @@
 
 -(NSString *) getCurrentColor;
 -(NSString *) getCurrentShape;
--(void) changeToRandomColor;
--(void) changeToRandomShape;
+-(NSString *) changeToRandomColor;
+-(NSString *) changeToRandomShape;
+-(NSString *) change:(NSString *)mode;
 
 @end

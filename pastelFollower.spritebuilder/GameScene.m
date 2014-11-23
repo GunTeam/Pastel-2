@@ -23,64 +23,103 @@
             if (frameCount == 14) break;
         }
     }
+    self.LEVEL_TIME = 300; //each level will last this many seconds
+    time = self.LEVEL_TIME; //start out the first level
     
     self.score = 0;
     self.multiplier = 1;
     self.levelBonus = 100;
+    self.matchMode = @"color";
+    
+    leader = (Leader *) [CCBReader load:@"Leader"];
+    numberToPlayWith = 4;
+    followerList = [self initializeFollowerList];
     
     CCSprite *sprite = [CCSprite spriteWithSpriteFrame:frames.firstObject];
     [self addChild:sprite];
+    
+    timeRunning = true;
+    [self schedule:@selector(updateBySecond:) interval:1];
 }
 
--(void) winLevel:(int) timeLeft{
+-(NSMutableArray *) initializeFollowerList{
+    NSMutableArray *followers = [NSMutableArray array];
+    for(int i =0; i<numberToPlayWith; i++){
+        Follower *follower = (Follower *) [CCBReader load:@"Follower"];
+        [followers addObject:[follower initWithOffset:i]];
+    }
+    return followers;
+}
+
+-(void) winLevel{
     self.multiplier += 1;
-    self.score += timeLeft*self.multiplier;
+    self.score += time*self.multiplier;
     self.score += self.levelBonus;
     self.levelBonus += 10;
-//    [self newLevel];
+    [self newLevel];
 //    [self displayScore];
 }
 
 -(void) newLevel{
-    set the match mode to either color or shape
-    set the leader color/shape
-    reset timer
-    timeRunning = true
+    [self toggleMatchMode];
+    [leader change:self.matchMode];
+    [self resetTimer];
+    timeRunning = true;
 }
 
-/*
- Update {
-    boolean allKorrect = [self checkAllStates]
-    if allKorrect:
-        [self winLevel]
+-(void) toggleMatchMode{
+    if([self.matchMode isEqualToString:@"color"]){
+        self.matchMode = @"shape";
+    }
+    else{
+        self.matchMode = @"color";
+    }
+}
+
+-(void) resetTimer{
+    time = self.LEVEL_TIME;
+}
+
+-(void) updateBySecond: (CCTime) dt{
+    Boolean allKorrect = [self checkAllStates];
+    if(allKorrect){
+        [self winLevel];
+    }
+    else{
+        if(timeRunning){
+            time -= dt;
+        }
+        if(time < 0){
+            timeRunning = false;
+//            [self timeOver];
+        }
+        [self updateTimeLabel];
+    }
+ }
  
-    if(self.timeRunning)
-        time -= 1/60
-    if(time < 0)
-         self.timeRunning = false
-        [self timeOver]
-    [self updateTimeLabel]
+
+ -(Boolean) checkAllStates{
+     for(Follower *follower in followerList){
+         if([self.matchMode isEqualToString:@"color"]){
+             if(![follower.currentColor isEqualToString:leader.currentColor]){
+                 return false;
+             }
+         }
+         else{
+             if(![follower.currentShape isEqualToString:leader.currentShape]){
+                 return false;
+             }
+         }
+     }
+
+     return true;
  }
 
- checkAllStates{
- 
-    for follower in followerList
-        if( self.matchMode == "color")
-            if(follower.currentColor != leader.currentColor){
-                return False
-            }
-        else{
-            if(follower.currentShape != leader.currentShape){
-                return False
-            }
-        }
-    return True
- }
- 
- updateTimeLabel{
+ -(void)updateTimeLabel{
  
  }
- 
+
+/*
  timeOver{
     [self takeAwayHeart]
     flash screen
